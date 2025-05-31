@@ -1,18 +1,21 @@
 import LoginContainer from "./loginContainer";
 import HomePage from "./homepage";
 import AboutUs from "./aboutUs";
-import './index.css';
-import './App.css';
+import { Link, BrowserRouter, Route } from "react-router";
+import "./index.css";
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      <LoginContainer/>
-      <HomePage />
-      <AboutUs />
+      <BrowserRouter>
+        <Link to="/">Login</link>
+        <Route>
+          <LoginContainer />
+        </Route>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
