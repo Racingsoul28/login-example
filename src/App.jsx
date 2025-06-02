@@ -7,7 +7,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Hola mundo2</h1>
+      <h1>Test</h1>
+      <LoginContainer/>
+      <HomePage/>
     </>
   );
 }
