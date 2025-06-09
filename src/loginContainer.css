@@ -1,0 +1,22 @@
+.loginContainer{
+    border: 1px solid rgb(37, 37, 37);
+    background-color: rgba(240, 248, 255, 0.13);
+    padding: 20px 80px;
+    border-radius: 15px;
+}
+.loginContainer > button{
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.325);
+}
+.loginInput{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.loginInput > input{
+    height: 25px;
+    width: 190px;
+    padding: 3px;
+}

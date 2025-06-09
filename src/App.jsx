@@ -1,16 +1,23 @@
-import LoginContainer from "./loginContainer";
-import HomePage from "./homepage";
-import AboutUs from "./aboutUs";
-import "./index.css";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import "./App.css";
+
+/* Componentes */
+import LoginContainer from "./loginContainer";
+import HomePage from "./homePage";
+/* CIERRE: Componentes */
 
 function App() {
   return (
-    <>
-      <h1>Test2</h1>
-      <LoginContainer/>
-      <HomePage/>
-    </>
+    <BrowserRouter>
+      <header className="App-header">
+        <Link to="/home">Home</Link>
+        <Link to="/login">Login</Link>
+      </header>
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/login" element={<LoginContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

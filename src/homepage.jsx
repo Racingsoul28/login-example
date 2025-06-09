@@ -1,12 +1,13 @@
-import "./homepage.css";
 function HomePage(props) {
-  return (
-    <>
-      <header>Header</header>
-      <nav className="nav-bar">Navigation</nav>
-      <main>Main area</main>
-      <footer>Footer</footer>
-    </>
-  );
+    return(
+        <>
+            <div className="homePage">
+                <h1>Bienvenido a la Página Principal</h1>
+                <p>Esta es la página de inicio de tu aplicación.</p>
+                <button onClick={props.onLogout}>Cerrar sesión</button>
+            </div>
+        </>
+    );
 }
+
 export default HomePage;
