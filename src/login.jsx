@@ -1,11 +1,13 @@
 import "./loginContainer.css";
 import "./pressIntro";
 import PressIntro from "./pressIntro";
-import "./useFadeIn";
+import useFadeIn from "./useFadeIn";
+import { useState } from "react";
 
 function Login(props) {
   const lcUser = "admin";
   const lcPwd = "S3cureP@ssw0rd";
+  const [loginFailed, setLoginFailed] = useState(false);
 
   const handleLogin = () => {
     var user = document.getElementById("impUser").value;
@@ -13,15 +15,16 @@ function Login(props) {
     if (user === lcUser && pwd === lcPwd) {
       props.onLogin();
     } else {
-      alert("Usuario o contraseña incorrectos");
+      setLoginFailed(true);
+      console.log("login fallido");
     }
   };
 
-  //const fadeClass = useFadeIn("loginContainer", "fade-in");
+  const fadeClass = useFadeIn("loginContainer", "fade-in");
 
   return (
     <>
-      <div className={useFadeIn("loginContainer", "fade-in")}>
+      <div className={fadeClass}>
         <h1>Bienvenido</h1>
         <div className="loginInput">
           <p>Usuario:</p>
@@ -35,6 +38,9 @@ function Login(props) {
             id="inpPwd"
             onKeyDown={PressIntro(handleLogin)}
           />
+        </div>
+        <div>
+          {loginFailed && <p className="loginFailMsg">Usuario o contraseña incorrectos, intente de nuevo</p>}
         </div>
         <button type="button" onClick={handleLogin}>
           Iniciar sesión
