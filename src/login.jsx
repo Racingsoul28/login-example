@@ -1,6 +1,7 @@
 import "./loginContainer.css";
 import "./pressIntro";
 import PressIntro from "./pressIntro";
+import "./useFadeIn";
 
 function Login(props) {
   const lcUser = "admin";
@@ -16,9 +17,11 @@ function Login(props) {
     }
   };
 
+  //const fadeClass = useFadeIn("loginContainer", "fade-in");
+
   return (
     <>
-      <div className="loginContainer">
+      <div className={useFadeIn("loginContainer", "fade-in")}>
         <h1>Bienvenido</h1>
         <div className="loginInput">
           <p>Usuario:</p>

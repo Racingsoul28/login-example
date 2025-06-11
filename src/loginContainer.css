@@ -3,6 +3,14 @@
     background-color: rgba(240, 248, 255, 0.13);
     padding: 20px 80px;
     border-radius: 15px;
+    transition: 1.5s;
+}
+.loginContainer.fade-in {
+    animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 .loginContainer > button{
     margin-top: 20px;
