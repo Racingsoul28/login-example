@@ -40,7 +40,11 @@ function Login(props) {
           />
         </div>
         <div>
-          {loginFailed && <p className="loginFailMsg">Usuario o contraseña incorrectos, intente de nuevo</p>}
+          {loginFailed && (
+            <p className="loginFailMsg">
+              Usuario o contraseña incorrectos, intente de nuevo
+            </p>
+          )}
         </div>
         <button type="button" onClick={handleLogin}>
           Iniciar sesión

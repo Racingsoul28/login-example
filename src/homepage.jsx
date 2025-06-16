@@ -32,9 +32,13 @@ function HomePage(props) {
 
           <main className="homePageMain">
             <div className="homePageMainContent">
-              <Card title="Tarjeta 1" content="Contenido de la tarjeta 1" />
-              <Card title="Tarjeta 2" content="Contenido de la tarjeta 2" />
-              <Card title="Tarjeta 3" content="Contenido de la tarjeta 3" />
+              <Card title="Administración" content="Aplicativo para llevar el control de la administración del negocio" imgCard="/homePageImg/ico_AdminV01.png" />
+              <Card title="Inventario" content="Aplicativo para llevar el control del inventario de los insumos" imgCard="/homePageImg/ico_Modulev02.png" />
+              <Card title="Configuración" content="Configuraciones generales del sistema" imgCard="/homePageImg/ico_ConfigV01.png" />
+
+              <Card title="Administración" content="Aplicativo para llevar el control de la administración del negocio" imgCard="/homePageImg/ico_AdminV01.png" />
+              <Card title="Inventario" content="Aplicativo para llevar el control del inventario de los insumos" imgCard="/homePageImg/ico_Modulev02.png" />
+              
             </div>
           </main>
 

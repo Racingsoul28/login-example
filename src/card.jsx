@@ -4,16 +4,33 @@ function Card(props) {
   let { title, content, imgCard } = props;
   if (!title) title = "Título por defecto";
   if (!content) content = "Contenido por defecto";
-  if (!imgCard) imgCard = "https://th.bing.com/th/id/OIP.pwMO2wypxophplLz-UqqrgHaHa?o=7rm=3&rs=1&pid=ImgDetMain&cb=idpwebpc1";
+  if (!imgCard) imgCard = "/homePageImg/ico_Modulev02.png";
 
   return (
     <>
-      <div className="card">
+      {/* <div className="card">
         <div className="imgContainer">
           <img src={imgCard} alt="moduleImg" className="cardImg" />
         </div>
         <h2 className="cardTittle">{title}</h2>
-        <p className="cardDescription">{content}</p>
+        <div className="cardDescription">
+          <p>{content}</p>
+        </div>
+      </div> */}
+
+      <div className="card">
+        <img
+          src={imgCard}
+          alt="moduleImg"
+          className="cardIco"
+        />
+        <h2>{title}</h2>
+        <div className="card__content">
+          <p className="card__title">{title}</p>
+          <p className="card__description">
+            {content}
+          </p>
+        </div>
       </div>
     </>
   );
