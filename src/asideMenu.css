@@ -1,55 +1,82 @@
-/* From Uiverse.io by Javierrocadev */ 
+/* From Uiverse.io by Javierrocadev */
 .asideCard {
-  width: 100%;
-  height: 100%;
-  background: #0000001a;
-  border: 1px solid rgba(66, 66, 66, 0.334);
-  overflow: hidden;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background: #0000001a;
+    border: 1px solid rgba(66, 66, 66, 0.334);
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .asideTittle {
-  padding: 0px 15px;
-  text-align: center;
-  font-weight: 900;
-  font-size: 1.3em;
-  background-color: #00b491;
-  color: white;
+    padding: 0px 15px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.3em;
+    background-color: #00b491;
+    color: white;
 }
 
 .asideMenuContainer {
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  margin: 5px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.488);
-  color: white;
-  transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
 }
 
-.asideMenuItem{
+.asideMenuItem {
+    background-color: rgba(0, 0, 0, 0.488);
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     flex-flow: row nowrap;
     height: 40px;
     align-items: center;
+    justify-content: space-between;
+    margin: 5px;
 }
 
-.asideMenuContainer:hover {
-  background-color: rgba(128, 128, 128, 0.685);
-  cursor: pointer;
-  scale: 1.05;
-  transition: all 0.3s ease-in-out;
+.asideMenuItem:hover {
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.685);
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
 }
 
-.asideMenuItem > div:last-child {
-  padding: 2px 10px;
+.menuTittleContainer{
+    flex: 1;
+    text-align: left;
+    margin: 0px;
+    padding: 0px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-.menuImgContainer{
+.closeBtn {
+    background: linear-gradient(to right, #fe5919, #fc0850);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0px 5px;
+    height: 100%;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.asideMenuItem>div:last-child {
+    padding: 2px 10px;
+}
+
+.menuImgContainer {
     background-color: #008fd5;
     height: auto;
     overflow: hidden;
@@ -61,17 +88,19 @@
     justify-content: center;
 }
 
-.menuImgContainer > img {
+.menuImgContainer>img {
     height: 90%;
     width: 90%;
     object-fit: contain;
 }
+
 .more {
-  text-decoration: none;
-  color: white;
-  font-weight: 800;
-  font-size: 0.8rem;
-  background-color: #008fd5;
-  padding: 0px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 0.8rem;
+    background-color: #008fd5;
+    padding: 0px 15px;
 }
+
 /* CIERRE: stilo para la otra carta */

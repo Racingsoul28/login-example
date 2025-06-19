@@ -1,4 +1,5 @@
 import "./asideMenu.css"; // Assuming you have a CSS file for styles
+import AsideMenuItem from "./menuItem";
 
 function AsideMenu(props) {
   return (
@@ -8,17 +9,8 @@ function AsideMenu(props) {
           <p>Menu</p>
         </div>
         <div className="asideMenuContainer">
-          <div className="asideMenuItem">
-            <div className="menuImgContainer">
-              <img
-                src="/homePageImg/ico_ConfigV01.png"
-                alt="Profile Image"
-              />
-            </div>
-            <div>
-              <p>Home</p>
-            </div>
-          </div>
+        <AsideMenuItem />
+        <AsideMenuItem Tittle="Configuración" showCloseBtn={true} Img="/homePageImg/ico_ConfigV02.png" />  
         </div>
         <div className="more">
           <p>Application v0.1</p>

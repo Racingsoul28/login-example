@@ -20,7 +20,7 @@ function HomePage(props) {
               </div>
               <div>
                 <button  onClick={props.onlogout} className="btnLogOut">
-                  Cerrar Sesión
+                  <img src="/homePageImg/ico_LogOutV02.png" alt="imgLogOut" />
                 </button>
               </div>
             </div>  
@@ -35,28 +35,28 @@ function HomePage(props) {
               <Card
                 title="Administración"
                 content="Aplicativo para llevar el control de la administración del negocio"
-                imgCard="/homePageImg/ico_AdminV01.png"
+                imgCard="/homePageImg/ico_AdminV02.png"
               />
               <Card
                 title="Inventario"
                 content="Aplicativo para llevar el control del inventario de los insumos"
-                imgCard="/homePageImg/ico_Modulev02.png"
+                imgCard="/homePageImg/ico_Modulev03.png"
               />
               <Card
                 title="Configuración"
                 content="Configuraciones generales del sistema"
-                imgCard="/homePageImg/ico_ConfigV01.png"
+                imgCard="/homePageImg/ico_ConfigV02.png"
               />
 
               <Card
                 title="Administración"
                 content="Aplicativo para llevar el control de la administración del negocio"
-                imgCard="/homePageImg/ico_AdminV01.png"
+                imgCard="/homePageImg/ico_AdminV02.png"
               />
               <Card
                 title="Inventario"
                 content="Aplicativo para llevar el control del inventario de los insumos"
-                imgCard="/homePageImg/ico_Modulev02.png"
+                imgCard="/homePageImg/ico_Modulev03.png"
               />
             </div>
           </main>
