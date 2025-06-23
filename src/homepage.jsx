@@ -9,6 +9,14 @@ function HomePage(props) {
     setFadeIn(true);
   }, []);
 
+  const [mostrarMenu, setMostrarMenu] = useState(false);
+
+  //Función para mostrar menú en pantalla completa
+  function displayMenu() {
+    setMostrarMenu(!mostrarMenu);
+  }
+  //CIERRE: Función para mostrar menú en pantalla completa
+
   return (
     <>
       <div className={`homePage${fadeIn ? " fade-in" : ""}`}>
@@ -16,18 +24,26 @@ function HomePage(props) {
           <header className="homePageHeader">
             <div className="homePageHeaderBar">
               <div>
+                <button
+                  className="btnMenuAside"
+                  onClick={()=> displayMenu()}
+                >
+                  ☰
+                </button>
+              </div>
+              <div>
                 <h1>Bienvenido a la Página Principal</h1>
               </div>
               <div>
-                <button  onClick={props.onlogout} className="btnLogOut">
+                <button onClick={props.onlogout} className="btnLogOut">
                   <img src="/homePageImg/ico_LogOutV02.png" alt="imgLogOut" />
                 </button>
               </div>
-            </div>  
+            </div>
           </header>
 
-          <aside className="homePageAside">
-            <AsideMenu />
+          <aside className={mostrarMenu ? "fullHomePageAside" : "homePageAside"}>
+            <AsideMenu full={mostrarMenu} />
           </aside>
 
           <main className="homePageMain">

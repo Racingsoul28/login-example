@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 /* Componentes */
-import HomePage from "./homePage";
+import HomePage from "./homepage";
 import Login from "./login";
 /* CIERRE: Componentes */
 

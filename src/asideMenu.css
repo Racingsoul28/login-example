@@ -48,7 +48,6 @@
     border-radius: 10px;
     background-color: rgba(128, 128, 128, 0.685);
     cursor: pointer;
-    scale: 1.05;
     transition: all 0.3s ease-in-out;
 }
 

@@ -1,35 +1,56 @@
-.loginContainer{
-    border: 1px solid rgb(37, 37, 37);
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2023/03/19/10/12/skyline-7862200_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.loginContainer {
+    border: 3px  solid  #fe5919;
     background-color: rgba(240, 248, 255, 0.13);
+    background: rgba(255, 255, 255, 0.844);
     padding: 20px 80px;
     border-radius: 15px;
     transition: 1.5s;
+    color: #353535;
 }
+
 .loginContainer.fade-in {
     animation: fadeIn 0.8s ease;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px);}
-    to { opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.loginContainer > button{
+
+.loginContainer>button {
     margin-top: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.325);
 }
-.loginInput{
+
+.loginInput {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.loginInput > input{
+
+.loginInput>input {
     height: 25px;
     width: 190px;
     padding: 3px;
 }
 
-.loginFailMsg{
+.loginFailMsg {
     color: red;
     font-size: 0.8rem;
     padding: 0px;

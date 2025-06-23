@@ -18,6 +18,7 @@
     transform: translateY(0);
   }
 }
+
 /* CIERRE: Animación de entrada */
 
 /*Layout de la interfaz*/
@@ -51,19 +52,20 @@
   justify-content: space-between;
 }
 
-.homePageHeaderBar{
+.homePageHeaderBar {
   width: 100%;
   background-color: #fefefe;
   border-radius: 10px;
   /* border: 1px solid #aeff00; */
   display: flex;
   align-items: center;
-  justify-content: space-between;;
+  justify-content: space-between;
+  ;
   padding: 0px;
   overflow: hidden;
 }
 
-.homePageHeaderBar > div:last-child {
+.homePageHeaderBar>div:last-child {
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -83,6 +85,12 @@
   padding: 20px;
 }
 
+.fullHomePageAside{
+  z-index: 1;
+  grid-area: main;
+  padding: 20px;
+}
+
 .homePageMain {
   grid-area: main;
   /* background-color: #ecf0f1; */
@@ -90,7 +98,7 @@
 }
 
 .homePageMainContent {
-  height: 100%; 
+  height: 100%;
   width: auto;
   overflow: auto;
   display: flex;
@@ -106,9 +114,16 @@
   padding: 0px 15px;
   margin: 0px;
 }
+
 /* CIERRE: Layout de la interfaz*/
 
 /* Modificar apariencia en ancho reducido */
+@media screen and (min-width: 768px) {
+  .btnMenuAside {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .homePageGridContainer {
     grid-template-areas:
@@ -141,11 +156,21 @@
     background: linear-gradient(to right, #fe5919, #fc0850);
     font-size: 10px;
   }
-
 }
+
 /* CIERRE: Modificar apariencia en ancho reducido */
 
 /*Boton de cerrar sesion*/
+.btnMenuAside {
+  transition-duration: 0.3s;
+  background: linear-gradient(to right, #00b491, #01997b);
+  padding: 0px 15px;
+  margin: 0px;
+  border-radius: 0%;
+  height: 100%;
+  min-height: 49px;
+}
+
 .btnLogOut {
   transition-duration: 0.3s;
   background: linear-gradient(to right, #fe5919, #fc0850);
@@ -156,7 +181,7 @@
   min-height: 49px;
 }
 
-.btnLogOut > img {
+.btnLogOut>img {
   height: 30px;
   object-fit: contain;
 }
