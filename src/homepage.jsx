@@ -36,7 +36,7 @@ function HomePage(props) {
               </div>
               <div>
                 <button onClick={props.onlogout} className="btnLogOut">
-                  <img src="/homePageImg/ico_LogOutV02.png" alt="imgLogOut" />
+                  <img src="./homePageImg/ico_LogOutV02.png" alt="imgLogOut" />
                 </button>
               </div>
             </div>
