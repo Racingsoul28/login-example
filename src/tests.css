@@ -1,0 +1,91 @@
+.containter {
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    background: linear-gradient(to right, #0a2e3e, #171717);
+    border-radius: 15px;
+    inset: 0;
+    margin: auto;
+    width: 95vw;
+    height: 95vh;
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* stilo para la otra carta */
+/* From Uiverse.io by Javierrocadev */ 
+.asideCard {
+  width: 350px;
+  height: 350px;
+  background: #0000001a;
+  border: 2px solid rgb(66, 66, 66);
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.asideTittle {
+  padding: 0px 15px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.3em;
+  background-color: #00b491;
+  color: white;
+}
+
+.asideMenuContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 5px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.488);
+  color: white;
+}
+
+.asideMenuItem{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 40px;
+    align-items: center;
+}
+
+.asideMenuContainer:hover {
+  background-color: rgba(128, 128, 128, 0.685);
+  cursor: pointer;
+}
+
+.asideMenuItem > div:last-child {
+  padding: 2px 10px;
+}
+
+.menuImgContainer{
+    background-color: #008fd5;
+    height: auto;
+    overflow: hidden;
+    padding: 0px;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuImgContainer > img {
+    height: 90%;
+    width: 90%;
+    object-fit: contain;
+}
+.more {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 0.8rem;
+  background-color: #008fd5;
+  padding: 0px 15px;
+}
+/* CIERRE: stilo para la otra carta */

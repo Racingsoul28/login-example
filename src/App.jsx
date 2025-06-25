@@ -1,23 +1,24 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 /* Componentes */
-import LoginContainer from "./loginContainer";
-import HomePage from "./homePage";
+import HomePage from "./homepage";
+import Login from "./login";
 /* CIERRE: Componentes */
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => setIsLoggedIn(true);
+  const handleLogout = () => setIsLoggedIn(false);
   return (
-    <BrowserRouter>
-      <header className="App-header">
-        <Link to="/home">Home</Link>
-        <Link to="/login">Login</Link>
-      </header>
-      <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/login" element={<LoginContainer />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      {isLoggedIn ? (
+        <HomePage onlogout={handleLogout} />
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
+    </>
   );
 }
 

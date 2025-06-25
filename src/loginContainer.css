@@ -1,22 +1,78 @@
-.loginContainer{
-    border: 1px solid rgb(37, 37, 37);
-    background-color: rgba(240, 248, 255, 0.13);
-    padding: 20px 80px;
-    border-radius: 15px;
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2023/03/19/10/12/skyline-7862200_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.loginContainer > button{
+
+.loginContainer {
+    border: 4px  solid  #fe5919;
+    background-color: rgba(240, 248, 255, 0.13);
+    background: linear-gradient(to right, #008fd5, #0278b2);
+    padding: 0px;
+    border-radius: 15px;
+    transition: 1.5s;
+    color: #fefefe;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loginContainer.fade-in {
+    animation: fadeIn 0.8s ease;
+}
+
+.loginBody{
+    padding: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loginContainer>button {
     margin-top: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.325);
 }
-.loginInput{
+
+.loginInput {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.loginInput > input{
+
+.loginInput>input {
     height: 25px;
     width: 190px;
     padding: 3px;
+}
+
+.butonSection{
+    background-color: #fefefe;
+    width: 100%;
+    padding: 15px;
+}
+
+.loginBtn{
+    background-color: #008fd5;
+}
+
+.loginFailMsg {
+    color: red;
+    font-size: 0.8rem;
+    padding: 5px 0px;
+    margin: 0px;
+    text-align: center;
 }
