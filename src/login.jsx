@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function Login(props) {
   const lcUser = "admin";
-  const lcPwd = "S3cureP@ssw0rd";
+  const lcPwd = "admin";
   const [loginFailed, setLoginFailed] = useState(false);
 
   const handleLogin = () => {
@@ -25,30 +25,36 @@ function Login(props) {
   return (
     <>
       <div className={fadeClass}>
-        <h1>Bienvenido</h1>
-        <div className="loginInput">
-          <p>Usuario:</p>
-          <input type="text" name="impUser" id="impUser" />
+        <div className="loginHeader">
+          <h1>Bienvenido</h1>
         </div>
-        <div className="loginInput">
-          <p>Contraseña:</p>
-          <input
-            type="password"
-            name="inpPwd"
-            id="inpPwd"
-            onKeyDown={PressIntro(handleLogin)}
-          />
+        <div className="loginBody">
+          <div className="loginInput">
+            <p>Usuario:</p>
+            <input type="text" name="impUser" id="impUser" />
+          </div>
+          <div className="loginInput">
+            <p>Contraseña:</p>
+            <input
+              type="password"
+              name="inpPwd"
+              id="inpPwd"
+              onKeyDown={PressIntro(handleLogin)}
+            />
+          </div>
         </div>
-        <div>
-          {loginFailed && (
-            <p className="loginFailMsg">
-              Usuario o contraseña incorrectos, intente de nuevo
-            </p>
-          )}
+        <div className="butonSection">
+          <div>
+            {loginFailed && (
+              <p className="loginFailMsg">
+                Usuario o contraseña incorrectos, intente de nuevo
+              </p>
+            )}
+          </div>
+          <button className="loginBtn" type="button" onClick={handleLogin}>
+            Iniciar sesión
+          </button>
         </div>
-        <button type="button" onClick={handleLogin}>
-          Iniciar sesión
-        </button>
       </div>
     </>
   );
