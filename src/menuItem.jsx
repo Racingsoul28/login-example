@@ -1,6 +1,6 @@
 function AsideMenuItem(props) {
     var lcTittle = props.Tittle || "Tittle";
-    var lcImg = props.Img || "/homePageImg/ico_HomeV02.png";
+    var lcImg = props.Img || "./homePageImg/ico_HomeV02.png";
   return (
     <>
       <div className="asideMenuItem">
