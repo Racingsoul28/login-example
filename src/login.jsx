@@ -12,7 +12,7 @@ function Login(props) {
   const handleLogin = () => {
     var user = document.getElementById("impUser").value;
     var pwd = document.getElementById("inpPwd").value;
-    if (user === lcUser && pwd === lcPwd) {
+    if (user == lcUser && pwd === lcPwd) {
       props.onLogin();
     } else {
       setLoginFailed(true);
